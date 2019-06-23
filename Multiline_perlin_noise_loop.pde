@@ -1,3 +1,5 @@
+boolean render = false;
+
 int setFrameRate = 60;
 float transitionTimeFrame = 2;
 
@@ -97,7 +99,7 @@ void draw() {
   if(frameCount >= totalFrames){
     noLoop();
   }
-  else {
+  else if(render) {
     saveFrame("Animation-Frame-############.png");
   }
 }
